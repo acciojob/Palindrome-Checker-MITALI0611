@@ -8,9 +8,9 @@ checkBtn.addEventListener("click", () => {
     let reverseInput = filterInput.split("").reverse().join("");
     infoTxt.style.display = "block";
     if(filterInput != reverseInput) {
-        return infoTxt.innerHTML = `No, <span>'${txtInput.value}'</span> isn't a palindrome!`;
+        return infoTxt.innerHTML = `false, <span>'${txtInput.value}'</span> isn't a palindrome!`;
     }
-    infoTxt.innerHTML = `Yes, <span>'${txtInput.value}'</span> is a palindrome!`;
+    infoTxt.innerHTML = `true, <span>'${txtInput.value}'</span> is a palindrome!`;
 });
 txtInput.addEventListener("keyup", () => {
     filterInput = txtInput.value.toLowerCase().replace(/[^A-Z0-9]/ig, "");
